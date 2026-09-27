@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smokes & Yarn | Crochet Site</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="blob-bg"></div>
+  <div class="blob-bg blob-2"></div>
+
+  <nav class="glass-nav">
+    <div class="logo">Smokes <span>&amp;</span> Yarn</div>
+    <ul class="nav-links">
+      <li><a href="/#home">Home</a></li>
+      <li><a href="/#gallery">Gallery</a></li>
+      <li><a href="/#about">About</a></li>
+      <li>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          🌙
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Handmade with love.</h1>
+        <p>Explore a cozy collection of amigurumi, cozy blankets, and stylish totes, all crafted with a touch of magic.
+        </p>
+        <a href="#gallery" class="btn">View Gallery</a>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+      <h2>My Creations</h2>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="amigurumi">Amigurumi</button>
+        <button class="filter-btn" data-filter="home">Home & Wearables</button>
+      </div>
+
+      <div class="gallery-grid">
+        <a href="/bunny.html" class="card" data-category="amigurumi">
+          <div class="card-img-wrapper">
+            <img src="/images/bunny.jpg" alt="Crochet Bunny Amigurumi">
+            <div class="card-overlay">
+              <span>Mint Bunny</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/blanket.html" class="card" data-category="home">
+          <div class="card-img-wrapper">
+            <img src="/images/blanket.jpg" alt="Pastel Crochet Blanket">
+            <div class="card-overlay">
+              <span>Lavender Dreams Blanket</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/tote.html" class="card" data-category="home">
+          <div class="card-img-wrapper">
+            <img src="/images/tote.jpg" alt="Granny Square Tote Bag">
+            <div class="card-overlay">
+              <span>Sunshine Granny Tote</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="about" class="about-section glass-card">
+      <div class="about-content">
+        <h2>About Me</h2>
+        <p>Hi, I'm Manahil, a Comp Sci grad who finds her little escape from the seriousness of life in soft yarn, tiny
+          stitches, and a
+          bit of whimsy. I love turning colorful yarn into cozy, cuddly creations, one loop, one idea, and probably one
+          too-many skeins at a time.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Smokes & Yarn. Made with loops and love.</p>
+  </footer>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
