@@ -1,4 +1,5 @@
-import './style.css'
+import './style.css';
+import './desksprite.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Gallery Filtering
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Smooth Scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function (this: HTMLAnchorElement, e) {
       e.preventDefault();
       const targetId = this.getAttribute('href');
       if (targetId) {
@@ -54,13 +55,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('.glass-nav') as HTMLElement;
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
-      nav.style.padding = '1rem 5%';
+      nav.style.padding = '0.5rem 5%';
       nav.style.boxShadow = 'var(--glass-shadow)';
     } else {
-      nav.style.padding = '1.5rem 5%';
+      nav.style.padding = '0.8rem 5%';
       nav.style.boxShadow = 'none';
     }
   });
+
+  // Init DeskSprite
+  if ((window as any).DeskSprite) {
+    (window as any).DeskSprite.start({
+      mount: '#cat-mount',
+      skin: 'cat',
+      scale: 0.8,
+      accent: '#f29cba', // matching new primary color
+      desk: false
+    });
+  }
 
   // Theme Toggle Logic
   const themeToggle = document.getElementById('theme-toggle');
