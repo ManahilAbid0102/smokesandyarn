@@ -8,3 +8,8 @@ A whimsical website to find the patterns and designs of cute crochet projects I'
 ### Commands
  - npm install
  - npm run dev
+
+### External Links
+ - veyro.dev 
+  - mesh gradient (nebula and bloom)
+ - https://github.com/welltilln/desksprite
